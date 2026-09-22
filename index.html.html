@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic Structure Table Assessment</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;max-width:1050px;margin:0 auto;padding:18px;background:#f5f7fa;color:#222}
+.card{background:#fff;border-radius:14px;padding:22px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+h1{margin:0 0 10px;font-size:25px}
+.instructions{background:#eef5ff;border-left:5px solid #3974c5;padding:13px 15px;border-radius:6px;margin:12px 0}
+.bank{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 18px}
+.element{min-width:90px;min-height:56px;border:2px solid #8b96a5;border-radius:9px;background:white;padding:7px 11px;cursor:grab;text-align:center;user-select:none}
+.element.selected{border-color:#3974c5;background:#eaf2ff}
+.symbol{font-family:"Times New Roman",serif;font-size:22px;font-weight:bold}
+.label{font-size:11px;color:#666}
+.table-wrap{overflow-x:auto}
+table{width:100%;min-width:700px;border-collapse:collapse}
+th,td{border:1px solid #888;padding:8px 6px;text-align:center;vertical-align:middle}
+th{background:#e8eaed;font-size:14px}
+td{height:70px}
+.fixed-symbol{font-family:"Times New Roman",serif;font-size:21px;font-weight:bold}
+input{width:70px;min-height:44px;padding:6px;text-align:center;font-size:16px;border:2px solid #b8bec6;border-radius:7px}
+input.correct{border-color:#27833e;background:#eaf7ed}
+input.incorrect{border-color:#c62828;background:#fdecec}
+.dropzone{min-width:112px;min-height:50px;border:2px dashed #8995a4;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#fafbfc;padding:4px}
+.dropzone.over{border-color:#3974c5;background:#edf4ff}
+.dropzone.correct{border-color:#27833e;background:#eaf7ed}
+.dropzone.incorrect{border-color:#c62828;background:#fdecec}
+.placed{font-family:"Times New Roman",serif;font-size:21px;font-weight:bold}
+.feedback{display:block;font-size:11px;min-height:14px;margin-top:2px}
+.ok{color:#187a35}.bad{color:#b42318}
+button{min-height:44px;margin-top:18px;padding:10px 18px;border:0;border-radius:7px;background:#2f6fed;color:#fff;font-size:16px}
+button.secondary{background:#666;margin-left:8px}
+#result{margin-top:14px;font-weight:bold;font-size:18px}
+.note{font-size:13px;color:#666}
+@media(max-width:600px){
+ body{padding:10px}.card{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Q5. Atomic Structure — Complete the Table</h1>
+
+<div class="instructions">
+<strong>Instructions:</strong> Complete the missing boxes using your knowledge of atomic structure.
+For the rows with a blank Chemical Symbol, choose the correct symbol from the element bank.
+<strong>Mg²⁺ and ²³⁸U are already given</strong>, as requested.
+On a mobile phone, tap an element card and then tap the blank symbol box.
+</div>
+
+<p class="note">
+Use the relationships: <strong>atomic number = number of protons</strong>,
+<strong>mass number = protons + neutrons</strong>, and
+<strong>charge = protons − electrons</strong>.
+</p>
+
+<h3>Choose the correct chemical symbol</h3>
+<div class="bank">
+
+<div class="element" draggable="true" data-symbol="16O2-">
+  <div class="symbol"><sup>16</sup>O<sup>2−</sup></div>
+  <div class="label">oxide ion</div>
+</div>
+
+<div class="element" draggable="true" data-symbol="119Sn">
+  <div class="symbol"><sup>119</sup>Sn</div>
+  <div class="label">tin atom</div>
+</div>
+
+<div class="element" draggable="true" data-symbol="56Fe3+">
+  <div class="symbol"><sup>56</sup>Fe<sup>3+</sup></div>
+  <div class="label">iron(III) ion</div>
+</div>
+
+<div class="element" draggable="true" data-symbol="107Ag+">
+  <div class="symbol"><sup>107</sup>Ag<sup>+</sup></div>
+  <div class="label">silver ion</div>
+</div>
+
+<div class="element" draggable="true" data-symbol="35Cl-">
+  <div class="symbol"><sup>35</sup>Cl<sup>−</sup></div>
+  <div class="label">distractor</div>
+</div>
+
+<div class="element" draggable="true" data-symbol="24Mg2+">
+  <div class="symbol"><sup>24</sup>Mg<sup>2+</sup></div>
+  <div class="label">distractor</div>
+</div>
+
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Chemical<br>Symbol</th>
+<th>Number of<br>Protons</th>
+<th>Number of<br>Neutrons</th>
+<th>Number of<br>Electrons</th>
+<th>Charge</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- O: symbol is blank, protons given -->
+<tr>
+<td>
+<div class="dropzone" data-answer="16O2-">Drop / tap</div>
+<span class="feedback"></span>
+</td>
+<td>8</td>
+<td><input data-answer="8"><span class="feedback"></span></td>
+<td>10</td>
+<td>-2</td>
+</tr>
+
+<!-- Sn: symbol blank, protons given -->
+<tr>
+<td>
+<div class="dropzone" data-answer="119Sn">Drop / tap</div>
+<span class="feedback"></span>
+</td>
+<td>50</td>
+<td><input data-answer="69"><span class="feedback"></span></td>
+<td><input data-answer="50"><span class="feedback"></span></td>
+<td><input data-answer="0"><span class="feedback"></span></td>
+</tr>
+
+<!-- Mg known -->
+<tr>
+<td><div class="fixed-symbol"><sup>24</sup>Mg<sup>2+</sup></div></td>
+<td>12</td>
+<td><input data-answer="12"><span class="feedback"></span></td>
+<td><input data-answer="10"><span class="feedback"></span></td>
+<td>+2</td>
+</tr>
+
+<!-- U known -->
+<tr>
+<td><div class="fixed-symbol"><sup>238</sup>U</div></td>
+<td>92</td>
+<td><input data-answer="146"><span class="feedback"></span></td>
+<td><input data-answer="92"><span class="feedback"></span></td>
+<td>0</td>
+</tr>
+
+<!-- Fe: symbol blank -->
+<tr>
+<td>
+<div class="dropzone" data-answer="56Fe3+">Drop / tap</div>
+<span class="feedback"></span>
+</td>
+<td>26</td>
+<td><input data-answer="30"><span class="feedback"></span></td>
+<td>23</td>
+<td>+3</td>
+</tr>
+
+<!-- Ag: symbol blank -->
+<tr>
+<td>
+<div class="dropzone" data-answer="107Ag+">Drop / tap</div>
+<span class="feedback"></span>
+</td>
+<td>47</td>
+<td><input data-answer="60"><span class="feedback"></span></td>
+<td>46</td>
+<td>+1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<button id="submit" type="button">Submit answers</button>
+<button id="reset" type="button" class="secondary">Reset</button>
+<div id="result" aria-live="polite"></div>
+</div>
+
+<div class="card">
+<h2>Instructor version</h2>
+<ul>
+<li><strong>Format:</strong> Same structure as the supplied example.</li>
+<li><strong>Rows:</strong> 6.</li>
+<li><strong>Known symbols:</strong> Mg²⁺ and ²³⁸U.</li>
+<li><strong>Unknown symbols:</strong> O²⁻, neutral Sn, Fe³⁺ and Ag⁺.</li>
+<li><strong>Difficulty:</strong> Students must use the mass number, element identity, proton/electron relationship, and charge relationship.</li>
+<li><strong>Marks:</strong> 15 automatically graded responses.</li>
+<li><strong>Mobile:</strong> No typing of isotope notation or superscripts is required.</li>
+</ul>
+</div>
+
+<script>
+(function(){
+let selected=null;
+
+function norm(v){
+ return String(v||"").trim().replace(/\s+/g,"").replace(/−/g,"-").toLowerCase();
+}
+
+function place(el,zone){
+ if(!el)return;
+ zone.innerHTML="";
+ const x=document.createElement("div");
+ x.className="placed";
+ x.innerHTML=el.querySelector(".symbol").innerHTML;
+ x.dataset.symbol=el.dataset.symbol;
+ zone.appendChild(x);
+ zone.classList.remove("correct","incorrect");
+ zone.nextElementSibling.textContent="";
+ zone.nextElementSibling.className="feedback";
+}
+
+document.querySelectorAll(".element").forEach(function(el){
+ el.addEventListener("dragstart",function(e){
+   e.dataTransfer.setData("text/plain",el.dataset.symbol);
+   selected=el;
+ });
+ el.addEventListener("click",function(){
+   document.querySelectorAll(".element").forEach(x=>x.classList.remove("selected"));
+   selected=el;
+   el.classList.add("selected");
+ });
+});
+
+document.querySelectorAll(".dropzone").forEach(function(zone){
+ zone.addEventListener("dragover",function(e){e.preventDefault();zone.classList.add("over")});
+ zone.addEventListener("dragleave",function(){zone.classList.remove("over")});
+ zone.addEventListener("drop",function(e){
+   e.preventDefault();zone.classList.remove("over");
+   const s=e.dataTransfer.getData("text/plain");
+   const el=Array.from(document.querySelectorAll(".element")).find(x=>x.dataset.symbol===s);
+   place(el,zone);
+   if(selected)selected.classList.remove("selected");
+   selected=null;
+ });
+ zone.addEventListener("click",function(){
+   if(selected){
+     place(selected,zone);
+     selected.classList.remove("selected");
+     selected=null;
+   }
+ });
+});
+
+function grade(){
+ let score=0,total=0;
+
+ document.querySelectorAll(".dropzone").forEach(function(z){
+   total++;
+   const placed=z.querySelector(".placed");
+   const fb=z.nextElementSibling;
+   z.classList.remove("correct","incorrect");
+   if(placed && norm(placed.dataset.symbol)===norm(z.dataset.answer)){
+     score++;z.classList.add("correct");
+     fb.textContent="✓ Correct";fb.className="feedback ok";
+   }else{
+     z.classList.add("incorrect");
+     fb.textContent="✗ Check the symbol";fb.className="feedback bad";
+   }
+ });
+
+ document.querySelectorAll("input[data-answer]").forEach(function(i){
+   total++;
+   const fb=i.nextElementSibling;
+   i.classList.remove("correct","incorrect");
+   if(norm(i.value)===norm(i.dataset.answer)){
+     score++;i.classList.add("correct");
+     fb.textContent="✓ Correct";fb.className="feedback ok";
+   }else{
+     i.classList.add("incorrect");
+     fb.textContent="✗ Check this value";fb.className="feedback bad";
+   }
+ });
+
+ const pct=Math.round(score/total*100);
+ document.getElementById("result").textContent=
+ "Score: "+score+"/"+total+" ("+pct+"%)";
+}
+
+function resetQuiz(){
+ document.querySelectorAll(".dropzone").forEach(function(z){
+   z.innerHTML="Drop / tap";
+   z.classList.remove("correct","incorrect","over");
+   z.nextElementSibling.textContent="";
+   z.nextElementSibling.className="feedback";
+ });
+ document.querySelectorAll("input").forEach(function(i){
+   i.value="";
+   i.classList.remove("correct","incorrect");
+   i.nextElementSibling.textContent="";
+   i.nextElementSibling.className="feedback";
+ });
+ document.querySelectorAll(".element").forEach(x=>x.classList.remove("selected"));
+ selected=null;
+ document.getElementById("result").textContent="";
+}
+
+document.getElementById("submit").addEventListener("click",grade);
+document.getElementById("reset").addEventListener("click",resetQuiz);
+})();
+</script>
+</body>
+</html>
